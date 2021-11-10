@@ -17,15 +17,13 @@ public class Projectile : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        Debug.Log(_speed);
-        
 
         _startPos = transform.position;
     }
 
     private void Update()
     {
-        _rigidbody.velocity = transform.right * _speed;
+        
         CheckBulletOutOfRange();
     }
 
@@ -39,6 +37,8 @@ public class Projectile : MonoBehaviour
         _speed = speed;
         _distance = distance;
         _isPlayer = isPlayer;
+        
+        _rigidbody.velocity = transform.right * speed;
     }
 
     private void OnCollisionEnter(Collision other)

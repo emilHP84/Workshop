@@ -67,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636471692852</updated>
       <workItem from="1636471699126" duration="119000" />
-      <workItem from="1636539634329" duration="9712000" />
+      <workItem from="1636539634329" duration="11576000" />
     </task>
     <servers />
   </component>
@@ -79,24 +79,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Weapon.cs</url>
-          <line>21</line>
-          <properties documentPath="C:\Users\jordan.passalacqua\Desktop\LocalRepo\Workshop\Assets\Scripts\Weapon.cs" initialLine="21" containingFunctionPresentation="method 'Shoot'">
-            <startOffsets>
-              <option value="590" />
-            </startOffsets>
-            <endOffsets>
-              <option value="642" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

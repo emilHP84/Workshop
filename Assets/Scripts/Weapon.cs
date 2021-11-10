@@ -6,7 +6,8 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
-    
+    [SerializeField] private GameObject firePoint;
+
     [SerializeField] private float speed;
     [SerializeField] private int distance;
     [SerializeField] private bool isPlayer;
@@ -18,7 +19,7 @@ public class Weapon : MonoBehaviour
 
     public void Shoot()
     {
-        var currentBullet = Instantiate(bullet, transform.position, Quaternion.identity, transform).GetComponent<Projectile>();
+        var currentBullet = Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation).GetComponent<Projectile>();
         currentBullet.Initialize(speed, distance, isPlayer);
     }
 }
