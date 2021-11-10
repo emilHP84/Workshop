@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -17,7 +14,7 @@ public class Weapon : MonoBehaviour
         if (isPlayer && Input.GetKeyDown(KeyCode.Space)) Shoot();
     }
 
-    public void Shoot()
+    private void Shoot()
     {
         var currentBullet = Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation).GetComponent<Projectile>();
         currentBullet.Initialize(speed, distance, isPlayer);

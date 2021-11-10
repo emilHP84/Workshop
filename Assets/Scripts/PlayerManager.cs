@@ -1,4 +1,3 @@
-using Scenes.Jordan.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,7 +16,11 @@ public class PlayerManager : Entity
     {
         var ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out var hit))
+        if (!Physics.Raycast(ray, out var hit)) return;
+        
+        _player.transform.LookAt(hit.point + new Vector3(0, transform.position.y, 0));
+        
+        if (Input.GetMouseButtonDown(0))
         {
             _player.destination = hit.point;
         }

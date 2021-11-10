@@ -1,12 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Scenes.Jordan.Scripts;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private float _speed;
     private int _distance;
     private bool _isPlayer;
 
@@ -23,7 +18,6 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        
         CheckBulletOutOfRange();
     }
 
@@ -34,14 +28,13 @@ public class Projectile : MonoBehaviour
 
     public void Initialize(float speed, int distance, bool isPlayer)
     {
-        _speed = speed;
         _distance = distance;
         _isPlayer = isPlayer;
         
         _rigidbody.velocity = transform.right * speed;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         switch (_isPlayer)
         {

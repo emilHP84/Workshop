@@ -1,5 +1,4 @@
 using System;
-using Scenes.Jordan.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 
